@@ -3,19 +3,22 @@ kind: Rollout
 metadata:
   name: canary-rollout-analysis
   labels:
-    'backstage.io/kubernetes-id': quarkus-app
+    "backstage.io/kubernetes-id": quarkus-app
+    app.kubernetes.io/instance: quarkus-app
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: canary-rollout-analysis
-      'backstage.io/kubernetes-id': quarkus-app
+      "backstage.io/kubernetes-id": quarkus-app
+      app.kubernetes.io/instance: quarkus-app
   template:
     metadata:
       labels:
         app: canary-rollout-analysis
-        'backstage.io/kubernetes-id': quarkus-app
+        "backstage.io/kubernetes-id": quarkus-app
+        app.kubernetes.io/instance: quarkus-app
     spec:
       containers:
         - name: rollouts-demo
