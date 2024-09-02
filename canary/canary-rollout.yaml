@@ -2,16 +2,20 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   name: canary-rollout-analysis
+  labels:
+    'backstage.io/kubernetes-id': quarkus-app
 spec:
   replicas: 4
   revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: canary-rollout-analysis
+      'backstage.io/kubernetes-id': quarkus-app
   template:
     metadata:
       labels:
         app: canary-rollout-analysis
+        'backstage.io/kubernetes-id': quarkus-app
     spec:
       containers:
         - name: rollouts-demo
