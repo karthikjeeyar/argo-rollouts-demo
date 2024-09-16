@@ -3,6 +3,7 @@ kind: Rollout
 metadata:
   name: canary-rollout-analysis
   labels:
+    app: rollouts
     "backstage.io/kubernetes-id": canary-rollout-analysis
     app.kubernetes.io/instance: canary-rollout-analysis
 spec:
