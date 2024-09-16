@@ -4,9 +4,10 @@ metadata:
   name: canary-rollout-analysis
   annotations:
     nginx.ingress.kubernetes.io/proxy-body-size: "100m"
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: haproxy
     nginx.ingress.kubernetes.io/app-root: /
 spec:
+  ingressClassName: haproxy 
   rules:
   - host: canary.dev.argoproj.io
     http:
