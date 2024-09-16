@@ -36,7 +36,7 @@ spec:
     canary:
       steps:
         - setWeight: 25
-        - pause: { duration: 10}
+        - pause: { duration: 5}
         - setWeight: 50
         # An AnalysisTemplate is referenced at the second step, which starts an AnalysisRun after
         # the setWeight step. The rollout will not progress to the following step until the
