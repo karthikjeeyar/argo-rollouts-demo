@@ -4,6 +4,7 @@ metadata:
   name: canary-rollout-analysis
   labels:
     app.kubernetes.io/instance: canary-rollout-analysis
+    "backstage.io/kubernetes-id": canary-rollout-analysis
 spec:
   host: canary-rollout-analysis-openshift-gitops.apps.lprabhu-160920241028.devcluster.openshift.com
   to:
